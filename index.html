@@ -191,10 +191,14 @@
 					color:  #d94a38;
 				}
 
+			#two container {
+				width: 100%;
+			}
+
 			#project-list a {
 				text-decoration: none;
 				font-size: 30px;
-				color: white;
+				
 				margin: 30px;
 				padding: 20px;
 				-webkit-transition: color .5s, font-size .5s; 
@@ -207,9 +211,23 @@
 
 				#project-list a:hover {
 				font-size: 80px;
-				color: rgb(235, 21, 21);
+				
 				
 				}
+
+			a img {
+				width: 200px;
+				height: 200px;
+				-webkit-transition: border .5s; 
+				-moz-transition:    border .5s; 
+				-ms-transition:     border .5s; 
+				-o-transition:      border .5s; 
+				transition:         border .5s;
+			}
+
+			a img:hover {
+				border: 6px solid white;
+			}
 			
 		</style>
 		<script>
@@ -335,16 +353,16 @@
 				</section>
 
 				<section class="item" id="two">
-					<div class="container" style="width: 1000px;">
+					<div class="container" style="width: 1500px;">
 						<h2 class="title">Projects</h2>
 						<p id="project-list">
-							<a href="https://chuks1993.github.io/ihu-web-app/" target="_blank">ihu</a>
-							<a href="https://expo.io/@chuks93/ihu-main" target="_blank">ihu-mobile</a>
-							<a href="https://chuks1993.github.io/week-4-game/" target="_blank">GOT webb-rpg</a>
-							<a href="https://chuks1993.github.io/Hangman-Game/" target="_blank">HollyWood Hangman</a>
-							<a href="https://chuks1993.github.io/TriviaGame/" target="_blank">Hip-Hop Trivia</a>
-							<a href="https://chuks1993.github.io/Firebase-HW/" target="_blank">Firebase Train Scheduler</a>
-							<a href="https://chuks1993.github.io/gifTastic/" target="_blank">gifTastic</a>
+							<a href="https://chuks1993.github.io/ihu-web-app/" target="_blank"><img src="images/ihu.PNG"></a>
+							<a href="https://expo.io/@chuks93/ihu-main" target="_blank"><img src="images/ihulogosquare.png"></a>
+							<a href="https://chuks1993.github.io/week-4-game/" target="_blank"><img src="images/GOT.PNG"></a>
+							<a href="https://chuks1993.github.io/Hangman-Game/" target="_blank"><img src="images/holly.PNG"></a>
+							<a href="https://chuks1993.github.io/TriviaGame/" target="_blank"><img src="images/trivia.PNG"></a>
+							<a href="https://chuks1993.github.io/Firebase-HW/" target="_blank"><img src="images/train.PNG"></a>
+							<a href="https://chuks1993.github.io/gifTastic/" target="_blank"><img src="images/gif.PNG"></a>
 						</p>
 					</div>
 					<a href="#three" class="next">Next</a>
