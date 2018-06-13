@@ -66,19 +66,19 @@
          &--1 {
              background-image: linear-gradient(to right bottom,
               $color-secondary-light, $color-secondary-dark),
-             url(../img/ihu.png); //adjust fie path based on compiled css
+             url(../img/ihu.jpg); //adjust fie path based on compiled css
          }
 
          &--2 {
              background-image: linear-gradient(to right bottom,
               $color-primary-light, $color-primary-dark),
-             url(../img/got.png);
+             url(../img/got.jpg);
          }
 
          &--3 {
              background-image: linear-gradient(to right bottom,
               $color-tertiary-light, $color-tertiary-dark),
-             url(../img/holly.png);
+             url(../img/holly.jpg);
          }
      }
 
