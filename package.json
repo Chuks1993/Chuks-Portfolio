@@ -1,0 +1,16 @@
+{
+  "name": "Chuks-Port",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
+  },
+  "repository": "https://github.com/Chuks1993/Chuks-Portfolio.git"
+}

@@ -1,391 +1,202 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Chuks Portfolio</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="viewport" content="width=1024" />
-		<link rel="stylesheet" href="common.css" />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
-		 crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="common.js"></script>
-		<script src="jquery.scrollex.js"></script>
-		<style>
-
-			html, body {
-				height: 100%;
-			}
-
-			#main {
-				height: 100%;
-				padding: 0;
-			}
-
-			.item {
-				position: relative;
-				height: 100%;
-				text-align: center;
-				-moz-transition: opacity 1s ease;
-				-webkit-transition: opacity 1s ease;
-				-o-transition: opacity 1s ease;
-				-ms-transition: opacity 1s ease;
-				transition: opacity 1s ease;
-			}
-
-				.item:before {
-					content: '';
-					display: inline-block;
-					height: 100%;
-					vertical-align: middle;
-				}
-
-				.item .container {
-					display: inline-block;
-					vertical-align: middle;
-					-moz-perspective: 900px;
-					-webkit-perspective: 900px;
-					-o-perspective: 900px;
-					-ms-perspective: 900px;
-					perspective: 900px;
-				}
-
-					.item .container > :last-child {
-						margin-bottom: 0;
-					}
-
-					.item .container .title {
-						display: inline-block;
-						background: white;
-						padding: 0.5em 1em;
-						border-radius: 0.25em;
-						font-size: 2.5em;
-						margin: 0 0 1.5em 0;
-						-moz-transform-origin: 50% 50%;
-						-webkit-transform-origin: 50% 50%;
-						-o-transform-origin: 50% 50%;
-						-ms-transform-origin: 50% 50%;
-						transform-origin: 50% 50%;
-					}
-
-					.item .container p, .item .container ul li {
-						font-size: 1.7em;
-						line-height: 1.5em;
-						margin: 0;
-						color: white;
-					}
-
-				.item .next {
-					position: absolute;
-					bottom: 2.5em;
-					left: 50%;
-					width: 5em;
-					height: 5em;
-					margin-left: -2.5em;
-					line-height: 5em;
-					border-radius: 100%;
-					color: #fff;
-					text-decoration: none;
-					border: solid 1px #fff;
-				}
-
-				
-				#projects {
-					position: absolute;
-					bottom: 2.5em;
-					left: 45%;
-					width: 4.5em;
-					height: 4.5em;
-					margin-left: -2.5em;
-					line-height: 4.3em;
-					border-radius: 100%;
-					color: #3B8DAF;
-					text-decoration: none;
-					border: solid 1px #3B8DAF;
-				}
-
-				#contacts {
-					position: absolute;
-					bottom: 2.5em;
-					left: 55%;
-					width: 4.5em;
-					height: 4.5em;
-					margin-left: -2em;
-					line-height: 4.3em;
-					border-radius: 100%;
-					color: #7B70B2;
-					text-decoration: none;
-					border: solid 1px #7B70B2;
-				}
-
-				.item.inactive {
-					opacity: 0.25;
-				}
-
-			#header {
-				background-color: #2A2D3C
-			}
-
-				#header .title {
-					color: #2A2D3C;
-				}
-
-			#one {
-				background-color: #03A081;
-			}
-
-				#one .title {
-					color: #03A081;
-				}
-
-			#two {
-				background-color: #3B8DAF;
-			}
-
-				#two .title {
-					color: #3B8DAF;
-				}
-
-			#three {
-				background-color: #7B70B2;
-			}
-
-				#three .title {
-					color: #7B70B2;
-				}
-
-			#four {
-				background-color: #e85a4f;
-			}
-
-				#four .title {
-					color: #e85a4f;
-				}
-
-			#contact-icons i {
-				color: white;
-				font-size: 100px;
-				margin: 10px;
-				-webkit-transition: color .5s;
-				-moz-transition:    color .5s;
-				-ms-transition:     color .5s;
-				-o-transition:      color .5s;
-				transition:         color .5s;
-				
-			}
-
-				#contact-icons #link:hover { 
-					color: #0077b5;
-				}
-
-				#contact-icons #stack:hover { 
-					color: #dd744d;
-				}
-				
-				#contact-icons #git:hover { 
-					color: #2A2D3C;
-				}
-
-				#contact-icons #email:hover { 
-					color:  #d94a38;
-				}
-
-			#two container {
-				width: 100%;
-			}
-
-			#project-list a {
-				text-decoration: none;
-				font-size: 30px;
-				
-				margin: 30px;
-				padding: 20px;
-				-webkit-transition: color .5s, font-size .5s; 
-				-moz-transition:    color .5s, font-size .5s; 
-				-ms-transition:     color .5s, font-size .5s; 
-				-o-transition:      color .5s, font-size .5s; 
-				transition:         color .5s, font-size .5s; 
-				
-			}
-
-				#project-list a:hover {
-				font-size: 80px;
-				
-				
-				}
-
-			a img {
-				width: 200px;
-				height: 200px;
-				-webkit-transition: border .5s; 
-				-moz-transition:    border .5s; 
-				-ms-transition:     border .5s; 
-				-o-transition:      border .5s; 
-				transition:         border .5s;
-			}
-
-			a img:hover {
-				border: 6px solid white;
-			}
-			
-		</style>
-		<script>
-
-			/* jquery.scrolly v0.1 | (c) n33 | n33.co @n33co | MIT */
-			(function(e){var t="click.scrolly";e.fn.scrolly=function(r,i){var s=e(this);return r||(r=1e3),i||(i=0),s.off(t).on(t,function(t){var n,s,o,u=e(this),a=u.attr("href");a.charAt(0)=="#"&&a.length>1&&(n=e(a)).length>0&&(s=n.offset().top,u.hasClass("scrolly-centered")?o=s-(e(window).height()-n.outerHeight())/2:(o=Math.max(s,0),i&&(typeof i=="function"?o-=i():o-=i)),t.preventDefault(),e("body,html").stop().animate({scrollTop:o},r,"swing"))}),s}})(jQuery);
-
-			$(function() {
-
-				$('.item').scrollex({
-
-					// Mode: Sets Scrollex to 'middle' mode (= midpoint between top/bottom edges must fall within contact area).
-						mode: 'middle',
-
-					// Initialize event: Add the 'inactive' class to this element as soon as Scrollex is initialized.
-						initialize: function() {
-							$(this).addClass('inactive');
-						},
-
-					// Enter event: Remove the 'inactive' class from this element.
-						enter: function() {
-							$(this).removeClass('inactive');
-						},
-
-					// Leave event: Apply the 'inactive' class to this element.
-						leave: function() {
-							$(this).addClass('inactive');
-						},
-
-					// Scroll event: Perform various CSS tweaks based on the user's progress through this element.
-						scroll: function(progress) {
-
-							var $this = $(this),
-								$container = $this.find('.container'),
-								$title = $this.find('.title'),
-								$p = $this.find('p'),
-								$next = $this.find('.next'),
-								x;
-
-							// Title.
-
-								// Rotation.
-									x = (progress - 0.5) * 540;
-
-									$title
-										.css('-moz-transform', 'rotateX(' + x + 'deg)')
-										.css('-webkit-transform', 'rotateX(' + x + 'deg)')
-										.css('-o-transform', 'rotateX(' + x + 'deg)')
-										.css('-ms-transform', 'rotateX(' + x + 'deg)')
-										.css('transform', 'rotateX(' + x + 'deg)');
-
-								// Opacity.
-									if (progress > 0.5)
-										x = 1 - progress;
-									else
-										x = progress;
-
-									x = Math.max(0, Math.min(1, x * 2));
-
-									$title.css('opacity', x);
-
-							// Paragraph.
-
-								// Opacity.
-									if (progress > 0.5)
-										x = 1 - progress;
-									else
-										x = progress;
-
-									x = Math.max(0, Math.min(1, x * 2));
-
-									$p.css('opacity', x);
-
-							// Next.
-
-								// Opacity.
-									x = 1 - (Math.max(0, progress - 0.5) * 1.5);
-
-									$next.css('opacity', x)
-
-								// Scale.
-									x = 1 - (Math.max(0, progress - 0.5));
-
-									$next
-										.css('-moz-transform', 'scale(' + x + ')')
-										.css('-webkit-transform', 'scale(' + x + ')')
-										.css('-o-transform', 'scale(' + x + ')')
-										.css('-ms-transform', 'scale(' + x + ')')
-										.css('transform', 'scale(' + x + ')');
-
-								// Scrolly.
-									$next.scrolly(3000);
-
-						}
-
-				});
-
-			});
-
-		</script>
-	</head>
-	<body>
-		<div id="main">
-
-			<!-- Header -->
-				<header class="item" id="header">
-					<div class="container">
-						<h1 class="title">Chuks Ethelbart Grinage</h1>
-						<p>I really like creating cool stuff with code</p>
-					</div>
-					<a href="#one" class="next">Start</a>
-					<a href="#two" class="next" id="projects">Projects</a>
-					<a href="#three" class="next" id="contacts">Contacts</a>
-				</header>
-
-			<!-- Items -->
-				<section class="item" id="one">
-					<div class="container">
-						<h2 class="title">About Me</h2>
-						<p>My name is Chuks and I was born and raised in Nigeria. I came to the United States to study biolgy but found my true passion in software development. I am well versed in multiple languages like JAVA, AWS, JavaScirpt, jquery, HTML/CSS, React.js, React-native, Swift, MongoDB, Meteor, MySQL, and so much more. I enjoy web developement/design, UI/UX developer and mobile App developer. I am also a dancer/choreographer so if youre looking for a top-notch programmer who can moon-walk then I'm your man.</p>
-					</div>
-					<a href="#two" class="next">Next</a>
-				</section>
-
-				<section class="item" id="two">
-					<div class="container" style="width: 1500px;">
-						<h2 class="title">Projects</h2>
-						<p id="project-list">
-							<a href="https://chuks1993.github.io/ihu-web-app/" target="_blank"><img src="images/ihu.PNG"></a>
-							<a href="https://expo.io/@chuks93/ihu-main" target="_blank"><img src="images/ihulogosquare.png"></a>
-							<a href="https://chuks1993.github.io/week-4-game/" target="_blank"><img src="images/GOT.PNG"></a>
-							<a href="https://chuks1993.github.io/Hangman-Game/" target="_blank"><img src="images/holly.PNG"></a>
-							<a href="https://chuks1993.github.io/TriviaGame/" target="_blank"><img src="images/trivia.PNG"></a>
-							<a href="https://chuks1993.github.io/Firebase-HW/" target="_blank"><img src="images/train.PNG"></a>
-							<a href="https://chuks1993.github.io/gifTastic/" target="_blank"><img src="images/gif.PNG"></a>
-						</p>
-					</div>
-					<a href="#three" class="next">Next</a>
-				</section>
-
-				<section class="item" id="three">
-					<div class="container">
-						<h2 class="title">Contacts</h2>
-						<p id="contact-icons">
-							<a href="https://stackoverflow.com/users/8817135/chuks-g" target="_blank"><i class="fab fa-stack-overflow" id="stack"></i></a>
-							<a href="https://github.com/Chuks1993" target="_blank"><i class="fab fa-github-square" id="git"></i></a>
-							<a href="https://www.linkedin.com/in/chuks-grinage/" target="_blank"><i class="fab fa-linkedin" id="link"></i></a>
-							<a href="url" target="_blank"><i class="fab fa-google-plus-square" id="email"></i></a>
-						</p>
-						</div>
-					<a href="#header" class="next">Top</a>
-				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-					
-				</footer>
-
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+            crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>Chuks Portfolio</title>
+    </head>
+    <body>
+
+        <header class="header">
+
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Chuks Grinage</span>
+                    <span class="heading-primary--sub">Full-stack Developer</span>
+                </h1>
+
+                <a href="#started" class="btn btn--white btn--animated" id="start">Start</a>
+            </div>  
+        </header>
+
+        <main>
+            <div class="test">
+                <section class="section-about">
+                    <div class="u-center-text u-margin-bottom-big" id="started">
+                        <h2 class="heading-secondary">
+                            About me
+                        </h2>
+                    </div>
+
+                    <div class="row" >
+                        <div class="col-1-of-2">
+                            <h3 class="heading-tertiary u-margin-bottom-small u-color-white">A geek at heart</h3>
+                            <p class="paragraph u-color-white">
+                                My name is Chuks and I was born and raised in Nigeria. I came to the United States when I was very young with my family.
+                                And as a first-generation immigrant child I had three career options: a doctor, an engineer or a disgrace. But like most
+                                kids that grew up in the 90s I was into video games and computers. Alot. I still have fond memories of my sega genesis and
+                                nintendo 64. My love for electronics only grew from there. My parents weren't a fan of my 'obsession', they thold me that
+                                I could never make money playing video games -- boy were they wrong. I never grew out of it and now I've taken that 'obsession'
+                                and made it into my career. My parents could not be anymore proud.
+                            </p>
+
+                            <h3 class="heading-tertiary u-margin-bottom-small u-color-white">Dancer, Chef and Programmer</h3>
+                            <p class="paragraph u-color-white">
+                                 I am a former biology major who decided to puruse his passion as a programmer. I have been programming since 2016. I am well
+                                versed in multiple languages such as; JavaScript, React, React-native, HTML/CSS, MongoDB, Node.js, MySQL, and more. I am
+                                also an incredible dancer/choregrapher who has performed around the world. And not to mention a mean cook. So when you ever
+                                need a programmer that can moonwalk and whip up a mean stir fry then I'm your guy.
+                            </p>
+
+                            <a href="https://www.linkedin.com/in/chuks-grinage/" target="_blank" class="btn-text">Get to know me &rarr;</a>
+                        </div>
+                        <div class="col-1-of-2">
+                            <div class="composition">
+                                <img src="img/chuks1.JPG" alt="Photo 1" class="composition__photo composition__photo--pl">
+                                <img src="img/me.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                                <img src="img/chuks2.JPG" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            
+            
+            <section class="section-tours">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/Love-Coding.mp4" type="video/mp4">
+                        <source src="img/Love-Coding.webm" type="video/webm"> Your browser sucks and therefore cannot supprt video
+                    </video>
+                </div>
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary u-color-grey">
+                        My projects
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">ihu</span>
+                                    
+                                </h4>
+                                <div class="card__detail">
+                                    <ul>
+                                        <li>JavaScript</li>
+                                        <li>HTML/CSS</li>
+                                        <li>Microsoft Auzure API</li>
+                                        <li>Mobile Version: React-native</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-1">
+                               <div class="card__cta">
+                                  
+                                    <a href="https://chuks1993.github.io/ihu-web-app/" target="_blank" class="btn btn--white">Check it out</a>
+                               </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">Game of Thrones RPG</span>
+                        
+                                </h4>
+                                <div class="card__detail">
+                                    <ul>
+                                        <li>JavaScript</li>
+                                        <li>HTML/CSS</li>
+                                        <li>Node.js</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-2">
+                                <div class="card__cta">
+                                   
+                                    <a href="https://chuks1993.github.io/week-4-game/" class="btn btn--white">Check it out</a>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">HollyWood Trivia Hangman</span>
+                        
+                                </h4>
+                                <div class="card__detail">
+                                    <ul>
+                                        <li>JavaScript</li>
+                                        <li>HTML/CSS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-3">
+                                <div class="card__cta">
+                                   
+                                    <a href="https://chuks1993.github.io/Hangman-Game/" class="btn btn--white">Check it out</a>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="u-center-text u-margin-top-huge">
+                    <a href="https://github.com/Chuks1993" target="_blank" class="btn btn--red u-color-white">more Projects</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="https://stackoverflow.com/users/8817135/chuks-g" target="_blank" class="footer__link  fab fa-stack-overflow"></a></li>
+                                <li class="footer__item"><a href="https://github.com/Chuks1993" class="footer__link fab fa-github-square" target="_blank"></a></li>
+                                <li class="footer__item"><a href="https://www.linkedin.com/in/chuks-grinage/" class="footer__link fab fa-linkedin" target="_blank"></a></li>
+                                <li class="footer__item"><a href="#" class="footer__link fab fa-google-plus-square" target="_blank"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2">
+                        <p class="footer__copyright">
+                             Built by <a href="#" class="footer__link">Chuks Ethelbart Grinage</a> Copyright &copy; by Jonas Schmedtmann
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
